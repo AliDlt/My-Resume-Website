@@ -1,14 +1,9 @@
-:root {
-  --primary-color: #292c3f;
-  --second-color: white;
-  --yellow-color: #f3c623;
-  --blue-color: #292c3f;
-}
-
-/* @font-face {
-  font-family: Vazirmatn, sans-serif;
-  src: url(./resources/fonts/Vazir.ttf);
-} */
+  :root {
+    --primary-color: #292c3f;
+    --second-color: white;
+    --yellow-color: #f3c623;
+    --blue-color: #292c3f;
+  }
 
 * {
   box-sizing: border-box;
@@ -88,18 +83,6 @@ nav {
   background-color: var(--second-color);
 }
 
-@media only screen and (max-width: 1000px) {
-  .main {
-    width: 100%;
-  }
-  .side {
-    display: none;
-  }
-  nav {
-    display: flex;
-  }
-}
-
 .profile-pic {
   height: 150px;
   border-radius: 100%;
@@ -119,10 +102,12 @@ nav {
 
 .DP {
   min-height: 110vh;
+  margin-top: 30px;
 }
 
 a {
   text-decoration: none;
+  color: var(--blue-color);
   text-align: center;
 }
 .btn {
@@ -361,6 +346,7 @@ i {
 .card-image:hover {
   animation: bounce 1s;
 }
+
 @keyframes bounce {
   0%,
   20%,
@@ -460,6 +446,11 @@ i {
   margin-top: 0;
 }
 
+.resume-divider {
+  display: none;
+  width: 100%;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -503,12 +494,12 @@ textarea:valid ~ label {
   position: relative;
   border-radius: 4px;
 }
-
-@media only screen and (max-width: 768px) {
+/* 
+@media only screen and (min-width: 768px) {
   .styled-input {
     width: 100%;
   }
-}
+} */
 
 .styled-input label {
   color: white;
@@ -643,4 +634,64 @@ textarea {
   color: var(--blue-color);
   text-align: center;
   margin: 0px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .resume-divider {
+    display: flex;
+  }
+  .divider {
+    font-size: 0.9rem;
+  }
+  .about-description {
+    font-size: 0.8rem;
+    word-wrap: normal;
+  }
+  .side {
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+  .main {
+    width: 100%;
+  }
+  .cards,
+  .boxes,
+  .resume-section,
+  .informations {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .styled-input,input {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .about-description{
+    font-size: 1.3rem;
+  } 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
